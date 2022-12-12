@@ -1,3 +1,5 @@
+# Inspired from https://github.com/github/gitignore/blob/master/Node.gitignore
+
 # Logs
 logs
 *.log
@@ -102,3 +104,28 @@ dist
 
 # TernJS port file
 .tern-port
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# sonar
+.scannerwork
+
+# electron
+out
+
+# jest-junit reporter
+test-results
+junit.xml
+test-report.xml

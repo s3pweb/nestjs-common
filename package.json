@@ -1,0 +1,35 @@
+{
+  "name": "@s3pweb/nestjs-ip-whitelist",
+  "version": "0.0.0",
+  "description": "A NestJS guard to authorise only the given IP(s)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s3pweb/nestjs-ip-whitelist.git"
+  },
+  "homepage": "https://github.com/s3pweb/nestjs-ip-whitelist",
+  "author": "s3pweb",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^9.2.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.13",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
+  }
+}
