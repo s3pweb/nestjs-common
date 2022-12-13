@@ -1,6 +1,6 @@
 {
   "name": "@s3pweb/nestjs-ip-whitelist",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A NestJS guard to authorise only the given IP(s)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
