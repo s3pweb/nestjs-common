@@ -32,4 +32,4 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: 'npm'
       - run: npm install -g @s3pweb/release-message-creator
-      - run: create-release-message -m "Publication de @s3pweb/simple-kafka-promise, version %s :" -w ${{secrets.DISCORD_WEBHOOK_LIBS}}
+      - run: create-release-message -m "Publication de @s3pweb/nestjs-common, version %s :" -w ${{secrets.DISCORD_WEBHOOK_LIBS}}
