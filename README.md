@@ -1,3 +1,4 @@
-# nestjs-ip-whitelist
+# S3PWeb - NestJS common libs
 
-A NestJS guard to authorise only the given IP(s)
+A repo containing all the common utilities for our NestJS projects:
+- A NestJS guard to authorise only the given IP(s)
