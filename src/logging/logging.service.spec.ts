@@ -1,5 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { LoggingService } from './logging.service';
+import { METRICS_SERVICE } from '../prometheus';
+import { MetricsServiceMock } from '../prometheus/mock/metrics-service.mock';
 
 describe(LoggingService.name, () => {
   let service: LoggingService;
@@ -7,6 +9,10 @@ describe(LoggingService.name, () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
+        {
+          provide: METRICS_SERVICE,
+          useValue: new MetricsServiceMock(),
+        },
         LoggingService,
       ],
     }).compile();
@@ -21,6 +27,7 @@ describe(LoggingService.name, () => {
   describe('LoggerService', () => {
     it('should not fail', async () => {
       service.log('');
+      service.getLogger('child');
       service.warn('');
       service.error('');
     });
