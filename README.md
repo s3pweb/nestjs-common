@@ -115,3 +115,22 @@ export class CatsController {
   }
 }
 ```
+
+#### HTTP Exceptions Logger
+
+This middleware will log as a warning all failed HTTP request (with their uuid) to provide more details when an error occurs.
+Example: `NotFoundException: Cannot GET /cats/v2/api/`
+
+To set the middleware everywhere (in the bootstrap function of main.ts):
+```ts
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  // Use our logger for all Nest logs
+  const logger = await app.resolve(LoggingService);
+  app.useLogger(logger);
+  // Add custom filter to log all http errors
+  const { httpAdapter } = app.get(HttpAdapterHost);
+  app.useGlobalFilters(new ExceptionsLoggerFilter(logger, httpAdapter));
+}
+```
