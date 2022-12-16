@@ -6,6 +6,7 @@ A repo containing all the common utilities for our NestJS projects:
 - A NestJS guard to authorise only the given IP(s)
 - A logging service implementing the LoggerService interface and using the [@s3pweb/s3pweb-logger](https://github.com/s3pweb/s3pweb-logger)
 - A MetricsInterface to be used in the logging service
+- Multiple middlewares
 
 ## Install
 ```shell
@@ -80,3 +81,37 @@ To use the PromService in a Controller or a Service, you can inject it in a cons
 ### Metrics Interface
 
 This interface enables you to implements the required functions for the `LoggingService`.
+
+### Middlewares
+
+#### Correlation ID
+
+This middleware will add a new header in each request and response `X-Correlation-Id`, this is an uuid V1 string (different for each request/response).
+It was lifted from https://github.com/eropple/nestjs-correlation-id/
+
+To set the middleware everywhere (in the bootstrap function of main.ts):
+
+```ts
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  // Tracking ID
+  app.use(CorrelationIdMiddleware());
+  
+  // ...
+}
+```
+
+You can then get the uuid in a controller:
+
+```ts
+@Controller('v1/cats')
+export class CatsController {
+  @Post()
+  async createCat(
+    @Headers(correlationId) uuid: string,
+  ) {
+    // console.log(uuid)
+  }
+}
+```
