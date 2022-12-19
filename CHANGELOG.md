@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v0.2.0...v0.3.0) (2022-12-19)
+
+
+### Features
+
+* **middleware:** add the correlation ID middleware ([371e838](https://github.com/s3pweb/nestjs-ip-whitelist/commit/371e8380fbdc19782ac0f1d44ed6e9c4abf5fb99))
+* **middleware:** add the HTTP exceptions logger middleware ([f471053](https://github.com/s3pweb/nestjs-ip-whitelist/commit/f4710536fca0333aa68efbeb5b21079bac42c8ea))
+
 ## [0.2.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v0.1.0...v0.2.0) (2022-12-15)
 
 
