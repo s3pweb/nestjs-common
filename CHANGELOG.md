@@ -1,6 +1,18 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.0.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v0.3.0...v1.0.0) (2023-02-22)
+
+
+### Features
+
+* **logger:** add debug and verbose functions ([4097d58](https://github.com/s3pweb/nestjs-ip-whitelist/commit/4097d58704d5bcfe3b25886b26c179d38b71f7b4))
+
+
+### Other
+
+* **deps-dev:** replace standard-version with commit-and-tag-version ([e171586](https://github.com/s3pweb/nestjs-ip-whitelist/commit/e171586d60e519e8f4d2089009b61676738362ce))
 
 ## [0.3.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v0.2.0...v0.3.0) (2022-12-19)
 
