@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.1](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v1.0.0...v1.0.1) (2023-02-22)
+
+
+### Other
+
+* add build command to npm-publish.yml ([05f5c38](https://github.com/s3pweb/nestjs-ip-whitelist/commit/05f5c3883db83b639d1e0b94086187bde81cd9b7))
+
 ## [1.0.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v0.3.0...v1.0.0) (2023-02-22)
 
 
