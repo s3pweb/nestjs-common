@@ -16,6 +16,14 @@ export class LoggingService implements LoggerService {
     return this.logger.child({ child });
   }
 
+  verbose(message: any, context?: string) {
+    this.logger.trace({ child: context }, message);
+  }
+
+  debug(message: any, context?: string) {
+    this.logger.debug({ child: context }, message);
+  }
+
   log(message: any, context?: string): any {
     this.logger.info({ child: context }, message);
   }

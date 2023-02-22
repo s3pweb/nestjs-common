@@ -30,6 +30,8 @@ describe(LoggingService.name, () => {
       service.getLogger('child');
       service.warn('');
       service.error('');
+      service.debug('debug message');
+      service.verbose('verbose message', 'logger_tests');
     });
   });
 });
