@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v1.0.2...v2.0.0) (2023-05-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **logging:** externalise logger config for @s3pweb/s3pweb-logger 2.0.0
+
+### Features
+
+* **logging:** externalise logger config for @s3pweb/s3pweb-logger 2.0.0 ([72797d6](https://github.com/s3pweb/nestjs-ip-whitelist/commit/72797d6b271e4de58a985539ef251eb84fd177d5))
+
 ## [1.0.2](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v1.0.1...v1.0.2) (2023-02-22)
 
 ## [1.0.1](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v1.0.0...v1.0.1) (2023-02-22)
