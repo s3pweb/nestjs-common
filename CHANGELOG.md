@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.0...v2.0.1) (2023-05-26)
+
+
+### Bug Fixes
+
+* **logger:** fix injection failure ([93afe5b](https://github.com/s3pweb/nestjs-ip-whitelist/commit/93afe5b2d025147841c80198d1fad1265abeca18))
+
 ## [2.0.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v1.0.2...v2.0.0) (2023-05-26)
 
 
