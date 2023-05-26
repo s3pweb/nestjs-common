@@ -1,14 +1,13 @@
 import { Inject, Injectable, LoggerService } from '@nestjs/common';
 import Logger from '@s3pweb/s3pweb-logger';
 import { METRICS_SERVICE, MetricsInterface } from '../prometheus';
-import { LOGGING_CONFIG } from './index';
 
 @Injectable()
 export class LoggingService implements LoggerService {
   private readonly logger;
 
   constructor(
-    @Inject(LOGGING_CONFIG) private options: Record<string, any>,
+    @Inject('LOGGING_CONFIG') private options: Record<string, any>,
     @Inject(METRICS_SERVICE) private readonly metricsService: MetricsInterface,
   ) {
     this.logger = new Logger(options).get().child({ child: LoggingService.name });

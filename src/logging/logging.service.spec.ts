@@ -3,7 +3,6 @@ import { LoggingService } from './logging.service';
 import { METRICS_SERVICE } from '../prometheus';
 import { MetricsServiceMock } from '../prometheus/mock/metrics-service.mock';
 import { configMock } from './mock/config.mock';
-import { LOGGING_CONFIG } from './index';
 
 describe(LoggingService.name, () => {
   let service: LoggingService;
@@ -16,7 +15,7 @@ describe(LoggingService.name, () => {
           useValue: new MetricsServiceMock(),
         },
         {
-          provide: LOGGING_CONFIG,
+          provide: 'LOGGING_CONFIG',
           useValue: configMock,
         },
         LoggingService,
