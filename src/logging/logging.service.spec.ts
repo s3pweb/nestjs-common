@@ -3,20 +3,22 @@ import { LoggingService } from './logging.service';
 import { METRICS_SERVICE } from '../prometheus';
 import { MetricsServiceMock } from '../prometheus/mock/metrics-service.mock';
 import { configMock } from './mock/config.mock';
+import { ConfigModule } from '@nestjs/config';
 
 describe(LoggingService.name, () => {
   let service: LoggingService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
+      imports: [
+        ConfigModule.forRoot({
+          load: [configMock],
+        }),
+      ],
       providers: [
         {
           provide: METRICS_SERVICE,
           useValue: new MetricsServiceMock(),
-        },
-        {
-          provide: 'LOGGING_CONFIG',
-          useValue: configMock,
         },
         LoggingService,
       ],
