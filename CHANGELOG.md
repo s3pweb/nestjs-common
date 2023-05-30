@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.2](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.1...v2.0.2) (2023-05-30)
+
+
+### Bug Fixes
+
+* **logger:** inject ConfigService in the constructor ([083afde](https://github.com/s3pweb/nestjs-ip-whitelist/commit/083afde4e0266576dcbc99d8c896c4b7dd53d542))
+
 ## [2.0.1](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.0...v2.0.1) (2023-05-26)
 
 
