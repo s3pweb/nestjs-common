@@ -25,7 +25,7 @@ On a controller to protect all routes:
 export class CatsController {}
 ```
 
-Directly on a route (with the guard on the controller):
+Directly on a route (with the `UseGuards` on the controller):
 ```ts
 @Post()
 @IpWhitelist('192.168.1.1')
@@ -34,7 +34,28 @@ async createCat() {}
 
 ### Logging Service
 
-To use the `LoggingModule`, add it to the imports of the `AppModule`, and then:
+To use the `LoggingModule`, add it to the imports of the `AppModule` with its configuration in a factory:
+
+```ts
+@Module({
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    LoggingModule.forRootAsync({
+      useFactory: async (config: ConfigService) => {
+        return config.get('logger');
+      },
+      inject: [ConfigService],
+    }),
+    PromModule,
+  ],
+  controllers: [
+    AppController,
+  ],
+})
+export class AppModule implements NestModule {}
+```
+
+Then it can be used in a service:
 
 ```ts
 @Injectable()
@@ -71,6 +92,11 @@ To be able ton inject it correctly, you need a metrics module exporting a servic
 export class PromModule {
   // -- Empty
 }
+```
+
+```ts
+@Injectable()
+export class PromService implements MetricsInterface {}
 ```
 
 To use the PromService in a Controller or a Service, you can inject it in a constructor with:
