@@ -21,8 +21,8 @@
   "author": "s3pweb",
   "license": "MIT",
   "peerDependencies": {
-    "@nestjs/common": "^9.0.0",
-    "@nestjs/core": "^9.0.0",
+    "@nestjs/common": "^9.0.0 || ^10.0.0",
+    "@nestjs/core": "^9.0.0 || ^10.0.0",
     "@s3pweb/s3pweb-logger": "^2.0.0"
   },
   "dependencies": {
