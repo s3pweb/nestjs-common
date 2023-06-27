@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.3...v2.1.0) (2023-06-27)
+
+
+### Features
+
+* **deps:** update peerDependencies to be compatible with NestJS 10 ([12d1206](https://github.com/s3pweb/nestjs-ip-whitelist/commit/12d120683b4ddd7b511a2463931e74eda6a7f6fb))
+
 ## [2.0.3](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.2...v2.0.3) (2023-05-30)
 
 ## [2.0.2](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.1...v2.0.2) (2023-05-30)
