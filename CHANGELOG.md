@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.2.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.1.0...v2.2.0) (2023-07-04)
+
+
+### Features
+
+* **middleware:** add a cache-control middleware ([dfcc939](https://github.com/s3pweb/nestjs-ip-whitelist/commit/dfcc9391f2192e1cdec7b428418d0ba6325deeed))
+
 ## [2.1.0](https://github.com/s3pweb/nestjs-ip-whitelist/compare/v2.0.3...v2.1.0) (2023-06-27)
 
 
