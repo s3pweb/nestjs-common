@@ -110,6 +110,23 @@ This interface enables you to implements the required functions for the `Logging
 
 ### Middlewares
 
+### Cache Control
+
+This middleware will add a new header to disable request caching (`Cache-Control`).
+
+To set the middleware everywhere (in the bootstrap function of main.ts):
+
+```ts
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  // Set Cache-Control header everywhere
+  app.use(cacheControlMiddleware());
+  
+  // ...
+}
+```
+
 #### Correlation ID
 
 This middleware will add a new header in each request and response `X-Correlation-Id`, this is an uuid V1 string (different for each request/response).
